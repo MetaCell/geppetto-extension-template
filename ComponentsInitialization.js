@@ -14,7 +14,7 @@ define(function (require) {
 		G.enableLocalStorage(false);
 		G.setIdleTimeOut(-1);
 		
-        document.title="SciDash";
+        document.title="Geppetto Extension";
         var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
         link.type = 'image/x-icon';
         link.rel = 'shortcut icon';

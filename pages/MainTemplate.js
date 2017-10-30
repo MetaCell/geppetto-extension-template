@@ -12,7 +12,7 @@ define(function (require) {
     var mainTemplate = React.createClass({
         render() {
             return (
-                <div id="scidashContainer">
+                <div id="mainContainer">
                     <div id="innerContainer">
                         <Header/>
 
