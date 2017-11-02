@@ -23,9 +23,9 @@ define(function (require) {
 
 		// Create router structure
         ReactDOM.render(
-			<Router basename={"/"}>
+			<Router basename={GEPPETTO_CONFIGURATION.contextPath}>
 				<Switch>
-					<Route path="/" component={MainTemplate} exact/>
+					<Route path="/geppetto" component={MainTemplate} exact/>
                     <Route path="/other" component={MainTemplate} />
 				</Switch>
 			</Router>

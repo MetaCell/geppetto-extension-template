@@ -17,7 +17,7 @@ define(function (require) {
                         <Header/>
 
                         <div id="midContainer">
-                            <Route path={'/'} component={Home} exact/>
+                            <Route path={'/geppetto'} component={Home} exact/>
                             <Route path={'/other'} component={Other} />
                         </div>
                         
