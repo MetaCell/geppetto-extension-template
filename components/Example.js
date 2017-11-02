@@ -13,12 +13,16 @@ define(function (require) {
         }
 
         componentDidMount() {
-            this.ExampleWS();
+            this.getPeople();
         }
 
-        ExampleWS() {
-            $.get('/api/people')
-                .then(( results ) => this.setState({ people: results }));
+        getPeople() {
+            var people = [
+                {"name": "Matteo2", "surname": "Cantarelli", "occupation": "Philisopher"},
+                {"name": "Adrian", "surname": "Quintana", "occupation": "Guru"},
+                {"name": "Giovanni", "surname": "Idilli", "occupation": "The Boss"},
+            ]
+            this.setState({people: people})
         }
 
         render() {
