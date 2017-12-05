@@ -14,7 +14,7 @@ define(function (require) {
 		G.enableLocalStorage(false);
 		G.setIdleTimeOut(-1);
 		
-        document.title="SciDash";
+        document.title="Geppetto Extension";
         var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
         link.type = 'image/x-icon';
         link.rel = 'shortcut icon';
@@ -23,9 +23,9 @@ define(function (require) {
 
 		// Create router structure
         ReactDOM.render(
-			<Router basename={"/"}>
+			<Router basename={GEPPETTO_CONFIGURATION.contextPath}>
 				<Switch>
-					<Route path="/" component={MainTemplate} exact/>
+					<Route path="/geppetto" component={MainTemplate} exact/>
                     <Route path="/other" component={MainTemplate} />
 				</Switch>
 			</Router>

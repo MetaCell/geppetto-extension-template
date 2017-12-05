@@ -12,12 +12,12 @@ define(function (require) {
     var mainTemplate = React.createClass({
         render() {
             return (
-                <div id="scidashContainer">
+                <div id="mainContainer">
                     <div id="innerContainer">
                         <Header/>
 
                         <div id="midContainer">
-                            <Route path={'/'} component={Home} exact/>
+                            <Route path={'/geppetto'} component={Home} exact/>
                             <Route path={'/other'} component={Other} />
                         </div>
                         

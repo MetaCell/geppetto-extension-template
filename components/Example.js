@@ -13,19 +13,23 @@ define(function (require) {
         }
 
         componentDidMount() {
-            this.ExampleWS();
+            this.getPeople();
         }
 
-        ExampleWS() {
-            $.get('http://127.0.0.1:8000/api/people')
-                .then(( results ) => this.setState({ people: results }));
+        getPeople() {
+            var people = [
+                {"name": "Matteo2", "surname": "Cantarelli", "occupation": "Philisopher"},
+                {"name": "Adrian", "surname": "Quintana", "occupation": "Guru"},
+                {"name": "Giovanni", "surname": "Idilli", "occupation": "The Boss"},
+            ]
+            this.setState({people: people})
         }
 
         render() {
             if (typeof this.state.people !== 'undefined') {
                 const persons = this.state.people.map((person, i) => (
                     <div>
-                        <h1>{person.name}</h1>
+                        <h3>{person.name}</h3>
                         <span>{person.surname}, {person.occupation}</span>
                     </div>
                 ));
