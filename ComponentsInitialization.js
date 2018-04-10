@@ -25,7 +25,7 @@ define(function (require) {
         ReactDOM.render(
 			<Router basename={GEPPETTO_CONFIGURATION.contextPath}>
 				<Switch>
-					<Route path="/geppetto" component={MainTemplate} exact/>
+					<Route path="/" component={MainTemplate} exact/>
                     <Route path="/other" component={MainTemplate} />
 				</Switch>
 			</Router>
