@@ -8,21 +8,16 @@ define(function (require) {
         constructor(props) {
             super(props);
             this.state = {
-
+                people: [],
             };
         }
 
         componentDidMount() {
-            this.getPeople();
-        }
-
-        getPeople() {
-            var people = [
-                {"name": "Matteo2", "surname": "Cantarelli", "occupation": "Philisopher"},
-                {"name": "Adrian", "surname": "Quintana", "occupation": "Guru"},
-                {"name": "Giovanni", "surname": "Idilli", "occupation": "The Boss"},
-            ]
-            this.setState({people: people})
+            fetch("/api/people")
+                .then((response) => response.json())
+                .then((responseJson) => {
+                    this.setState({people : responseJson});
+                });
         }
 
         render() {
